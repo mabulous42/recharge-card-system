@@ -12,22 +12,27 @@
 
     <select name="" id="network">
         <option value="empty" selected disabled>SELECT YOUR NETWORK PROVIDER</option>
-        <option value="">MTN</option>
-        <option value="">AIRTEL</option>
-        <option value="">GLO</option>
-        <option value="">9MOBILE</option>
+        <option value="mtn">MTN</option>
+        <option value="airtel">AIRTEL</option>
+        <option value="glo">GLO</option>
+        <option value="etisalat">9MOBILE</option>
     </select>
 
     <select name="" id="amount">
         <option value="not-selected" selected disabled>Choose Your Airtime Amount</option>
-        <option value="">100</option>
-        <option value="">200</option>
-        <option value="">500</option>
-        <option value="">1000</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
     </select>
 
     <button onclick="generateCard()">Generate Card</button>
     <h3 id="generated-card"></h3>
+
+    <h1>Load Airtime</h1>
+    <input type="text" id="loadCardInput">
+    <br>
+    <button onclick="loadAirtime()">Load Card</button>
     
 
     <script src="script.js"></script>
