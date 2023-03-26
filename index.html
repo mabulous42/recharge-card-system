@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,53 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Airtime Generator</h1>
+    <div class="big-container">
+        <div class="small-container">
+            <div class="airtime-generator-container">
+                <h1>Airtime Generator</h1>
 
-    <select name="" id="network">
-        <option value="empty" selected disabled>SELECT YOUR NETWORK PROVIDER</option>
-        <option value="mtn">MTN</option>
-        <option value="airtel">AIRTEL</option>
-        <option value="glo">GLO</option>
-        <option value="etisalat">9MOBILE</option>
-    </select>
+                <select name="" id="network">
+                    <option value="empty" selected disabled>SELECT YOUR NETWORK PROVIDER</option>
+                    <option value="mtn">MTN</option>
+                    <option value="airtel">AIRTEL</option>
+                    <option value="glo">GLO</option>
+                    <option value="etisalat">9MOBILE</option>
+                </select>
 
-    <select name="" id="amount">
-        <option value="not-selected" selected disabled>Choose Your Airtime Amount</option>
-        <option value="100">100</option>
-        <option value="200">200</option>
-        <option value="500">500</option>
-        <option value="1000">1000</option>
-    </select>
+                <select name="" id="amount">
+                    <option value="not-selected" selected disabled>Choose Your Airtime Amount</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                </select>
 
-    <button onclick="generateCard()">Generate Card</button>
-    <h3 id="generated-card"></h3>
+                <button onclick="generateCard()">Generate Card</button>
 
-    <h1>Load Airtime</h1>
-    <input type="text" id="loadCardInput">
-    <br>
-    <button onclick="loadAirtime()">Load Card</button>
-    
+                <div class="generated-pin-container">
+                    Generated Pin:
+                    <h3 id="generated-card"></h3>
+                </div>
+                
+            </div>
+
+
+            <div>
+                <h1>Load Airtime</h1>
+                <input type="text" id="loadCardInput">                
+                <button onclick="loadAirtime()">Load Card</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
