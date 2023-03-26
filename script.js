@@ -24,9 +24,9 @@ function generateCard() {
 }
 
 function loadAirtime() {
-    console.log(recharge.value.startsWith('*555*'));
-    console.log(recharge.value.includes(randomNumber));
-    console.log(recharge.value.endsWith('#'));
+    // console.log(recharge.value.startsWith('*555*'));
+    // console.log(recharge.value.includes(randomNumber));
+    // console.log(recharge.value.endsWith('#'));
 
     if (recharge.value === '') {
         alert("Please enter the recharge numbers before you proceed")
@@ -43,12 +43,12 @@ function loadAirtime() {
     else if (network.value === "etisalat" && recharge.value.startsWith("*232*") && recharge.value.includes(randomNumber) && recharge.value.endsWith('#')) {
         alert(network.value.toUpperCase() + " #" + amount.value + " Recharged Successfully");
     }
+    else if (!(recharge.value.startsWith('*555') || recharge.value.startsWith('*123') || recharge.value.startsWith('*126*') || recharge.value.startsWith('*232')) && recharge.value.includes(randomNumber) && recharge.value.endsWith('#')) {
+        alert("Invalid network recharge code");
+    }
     else if (!(recharge.value.includes(randomNumber))) {
         alert("Invalid Recharge Pin")
-    }
-    else if ((recharge.value.startsWith() != '*555' || recharge.value.startsWith() != '*123' || recharge.value.startsWith() != '*126' || recharge.value.startsWith() != '*232') && recharge.value.includes(randomNumber) && recharge.value.endsWith('#')) {
-        alert("Invalid network recharge code");
-    } 
+    }  
     else if (recharge.value.endsWith('#') != '#') {
         alert("# is missing")
     }
